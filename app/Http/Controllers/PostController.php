@@ -14,12 +14,12 @@ class PostController extends Controller
         ]);
     }
 
-    public function create(){
-        return view('posts.create');
+    public function create(Post $post){
+        return view('posts.create', ['post' => $post]);
     }
 
     public function edit(Post $post){
-        return view('posts.edit',['post' => $post]);
+        return view('posts.edit', ['post' => $post]);
     }
 
     public function destroy(Post $post){
